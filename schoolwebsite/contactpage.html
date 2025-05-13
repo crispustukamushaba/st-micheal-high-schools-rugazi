@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | St Michael High School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" input="text/css" href="contactpage.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">St Michael High School</div>
+            <p>Victory Through Education</p>
+        </div>
+    </header>
+    
+    
+    <div class="container">
+        <h1>Contact Our School</h1>
+        <p>Please use the form below or our contact information to reach out to us.</p>
+        
+        <div class="contact-container">
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="/submit-contact" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="academics">Academic Questions</option>
+                            <option value="activities">School Activities</option>
+                            <option value="feedback">Feedback/Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+            
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                
+                <div class="contact-method">
+                    
+                        
+                    
+                    <div>
+                        <h3>Address</h3>
+                        <p>P.O Box 1024<br>
+                         Amuca, Lira<br>
+                        Northern Uganda</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>Main Office: +256 765234567<br>
+                        Admissions: +256 456789345<br>
+                        Fax: +256 789654234</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>General Inquiries: info@stmichaelhighschool.edu<br>
+                        Admissions: admissions@stmichaelhighschool.edu<br>
+                        Principal: principal@stmichaelhighschool.edu</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h3>Office Hours</h3>
+                        <p>Monday-Friday: 8:00 AM - 5:00 PM<br>
+                        Saturday: 9:00 AM - 12:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+                
+                
+            </section>
+        
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 St Michael High School. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="#" style="color: var(--accent-color);"><i class="fab fa-facebook"></i></a> 
+                <a href="#" style="color: var(--accent-color);"><i class="fab fa-twitter"></i></a> 
+                <a href="#" style="color: var(--accent-color);"><i class="fab fa-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

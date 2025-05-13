@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(61, 10, 10);
+        }
+        .list{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            background-color: rgb(61, 10, 10);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+        .list h1{
+            color: white;
+            text-align: left;
+            padding: 20px;
+        }
+        .list ul{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            justify-content: right;
+            align-items: right;
+            margin-left: 40%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .list ul li{
+            display: inline-block;
+            margin: 0 15px;
+            padding: 10px 10px;
+            background-color: rgb(61, 10, 10);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+
+        }
+        .list ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .list ul li:hover {
+            background-color: rgb(100, 20, 20);
+        }
+        .list ul li:hover ul {
+            display: block;
+        }
+        .list ul li ul {
+            display: none;
+            position: absolute;
+            background-color: rgb(61, 10, 10);
+            padding: 10px;
+            margin: 0;
+            list-style-type: none;
+            border-radius: 5px;
+        }
+        .list ul li ul li {
+            display: block;
+            margin: 5px 0;
+        }
+        .list ul li ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .list ul li ul li:hover {
+            background-color: rgb(100, 20, 20);
+        }
+        @media (max-width: 768px) {
+            .list {
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+            padding: 10px;
+            }
+            .list h1 {
+            text-align: left;
+            margin: 0;
+            font-size: 18px;
+            }
+            .list ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            }
+            .list ul li {
+            display: block;
+            margin: 5px 0;
+            }
+        }
+        .form {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    background-color: rgb(61, 10, 10);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(100, 20, 20);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: rgb(150, 30, 30);
+}
+
+.form a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="list">
+        <h1>WELCOME TO OUR PORTAL</h1>
+        <ul>
+            <li><a href="index (2).html">HOME</a></li>
+            <li><a href="contactpage.html">CONTACT us</a></li>
+            <li><a href="staff profile.html">Staff profile</a></li>
+            <li><a href="new.html">Register</a></li>
+            <li><a href="michealgallery.html.html">Gallery</a></li>
+        </ul>
+    </div>
+    <div class="form">
+        <section>
+            <form action="login_process.php" method="post"></form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required style="background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 10px;">
+                <br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+                
+                <label for="studentNo">Student No.:</label>
+                <input type="text" id="studentNo" name="studentNo" required>
+                <br><br>
+                
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+                <br><br>
+                
+                <button type="submit">Login</button>
+                <br><br>
+                
+                <a href="capi.html">Forgot Password?</a>
+            </form>
+        </section>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".form form");
+    const usernameInput = document.getElementById("username");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const studentNoInput = document.getElementById("studentNo");
+
+    form.addEventListener("submit", (event) => {
+        if (!usernameInput.value || !emailInput.value || !passwordInput.value || !studentNoInput.value) {
+            alert("Please fill out all required fields.");
+            event.preventDefault();
+        }
+    });
+
+    passwordInput.addEventListener("input", () => {
+        if (passwordInput.value.length < 6) {
+            passwordInput.style.borderColor = "red";
+        } else {
+            passwordInput.style.borderColor = "green";
+        }
+    });
+});
+document.querySelector(".form form").addEventListener("submit", () => {
+                        document.getElementById("username").value = "";
+                        document.getElementById("email").value = "";
+                        document.getElementById("password").value = "";
+                        document.getElementById("studentNo").value = "";
+                    });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>st micheal  high school</title>
+  
+    <link rel="stylesheet" href="gallery.css"> 
+
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"> <img src="badge.jpg" alt=""><p><H1> MIGHTY SCHOOL</H1></P></a>
+            <!-- <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
+            <ul class="nav-links">
+                <li><a href="index(2).html">Home</a></li>
+                <li><a href="staff profile.html">Staff Profile</a></li>
+                <li><a href="contactpage.html">Contact us</a></li>
+                <li><a href="new.html">Register</a></li>
+                <li><a href="michealgallery.html.html">Gallery</a></li>
+                <a href="faq.html">FAQS</a>
+                
+            </ul>
+        </nav>
+        
+        <div class="headers">
+            <h1>Welcome to Light High School Gallery</h1>
+            <p>Explore our vibrant school life through images.</p>
+            </div>
+            <section class="gallery-section">
+        <h1>school events</h1>
+        <div class="gallery-container">
+            
+            <!-- Gallery images will be added here dynamically via JavaScript -->
+        </div>
+    </section>
+      <section class="hero" id="home">
+        
+        <div class="hero-content">
+            <h1>ST MICHEAL HIGH SCHOOL</h1>
+            <p> MIGHTY SCHOOL GALLERY</p>
+            <a href="home.html" class="btn">Explore More on what is taking place at school </a>
+        </div>
+    </section>
+
+
+    
+<script>
+    const galleryImages = [
+    "stu.jpg",
+    "asse.jpg",
+    "parade.jpg",
+    "picnic.jpg",
+    "vation.jpg",
+    "a level.jpg",
+    "scol.jpg",
+    "students.jpg",
+    // "biodi.jpg",
+    // "map.jpg"
+];
+
+// Function to create gallery items
+function createGallery() {
+    const galleryContainer = document.querySelector('.gallery-container');
+
+    galleryImages.forEach((imageUrl, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        img.alt = `Gallery Image ${index + 1}`;
+
+        galleryItem.appendChild(img);
+        galleryContainer.appendChild(galleryItem);
+    });
+}
+
+// Initialize the gallery when the page loads
+window.onload = createGallery;
+</script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="https://www.csjuganda.org" target="_blank">Visit Our Website</a>
+                <a href="mailto:info@csjuganda.org">Email Us: info@csjuganda.org</a>
+            </div>
+            <p>&copy; @2025 st micheal. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

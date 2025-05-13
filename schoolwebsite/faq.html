@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs  St Michael High School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="contactpage.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">St Michael High School</div>
+            <p>Victory Through Education</p>
+        </div>
+        <nav>
+            <a href="index(2).html">Home</a>
+            <a href="new.html">Register </a>
+            <a href="staff profile.html">Staff Profile</a>
+            <a href="contactpage.html">Contact</a>
+            <a href="michealgallery.html.html">Gallery</a>
+          </nav>
+    </header>
+
+    <div class="faq-container">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our school</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>What are the school admission requirements?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Admissions require a completed application form, previous school records, and an entrance assessment. Visit our admissions page or contact our admissions office for more details.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>What extracurricular activities are available?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>We offer sports, music, debate, science club, and various cultural activities. New activities are added based on student interest each semester.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>What are the school hours?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Regular school hours are 8:00 AM to 3:30 PM Monday through Friday. Extended care is available until 5:30 PM for registered students.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 St Michael High School. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="#" style="color: var(--accent-color);"><i class="fab fa-facebook"></i></a> 
+                <a href="#" style="color: var(--accent-color);"><i class="fab fa-twitter"></i></a> 
+                <a href="#" style="color: var(--accent-color);"><i class="fab fa-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
